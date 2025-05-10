@@ -11,6 +11,9 @@
   --yellow: #f4d35e;
   --light-yellow: #fbefc6;
   --header-font-light: #ddd;
+  --bg-light-blue: #e2edf3;
+  --card-blue: #305c73;
+  --card-border-blue: #244556;
 }
 
 body {
@@ -63,4 +66,36 @@ button {
   height: 50px;
   width: 50px;
   fill: var(--header-font-light);
+}
+
+.content {
+  background: var(--bg-light-blue);
+}
+
+.card-container {
+  padding: 12px 32px;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background: var(--card-blue);
+  color: var(--header-font-light);
+
+  border-radius: 10px;
+  border: 1px solid var(--dark-blue);
+}
+
+.book-title {
+  background: var(--yellow);
+  color: #111;
+  border-radius: 9px 9px 0 0;
+  padding-left: 8px;
+}
+
+.card p {
+  padding-left: 8px;
+  margin: 2px 0 6px;
 }
