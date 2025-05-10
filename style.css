@@ -10,6 +10,7 @@
   --dark-blue: #172a3a;
   --yellow: #f4d35e;
   --light-yellow: #fbefc6;
+  --header-font-light: #ddd;
 }
 
 body {
@@ -34,7 +35,7 @@ button {
   padding: 1rem;
 
   background: var(--dark-blue);
-  color: #ddd;
+  color: var(--header-font-light);
 }
 
 .add-book-section {
@@ -51,4 +52,15 @@ button {
   height: 30px;
   border-radius: 15px;
   border: 2px solid var(--light-yellow);
+}
+
+.logo {
+  display: flex;
+  gap: 18px;
+}
+
+.logo-svg {
+  height: 50px;
+  width: 50px;
+  fill: var(--header-font-light);
 }
