@@ -41,7 +41,9 @@ function createBookCard(book) {
 
 const cardContainer = document.querySelector(".card-container");
 const formContainer = document.querySelector(".form-container");
-const addBookBtn = document.querySelector("#call-book-form");
+const callBookFormBtn = document.querySelector("#call-book-form");
+const addBookBtn = document.querySelector("#add-book");
+console.log(addBookBtn);
 
 function displayBooks() {
   myLibrary.forEach((book) => {
@@ -50,7 +52,7 @@ function displayBooks() {
   });
 }
 
-addBookBtn.addEventListener("click", () => {
+callBookFormBtn.addEventListener("click", () => {
   formContainer.classList = formContainer.classList.contains("closed")
     ? "form-container"
     : "form-container closed";
