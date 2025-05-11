@@ -105,7 +105,7 @@ button {
 
 .form-container {
   background: var(--card-border-blue);
-  width: clamp(350px, 40%, 450px);
+  width: clamp(350px, 40%, 400px);
   padding: 18px;
 
   border: 4px solid var(--dark-blue);
@@ -117,8 +117,93 @@ button {
   transform: translate(-50%, 0);
 
   color: var(--header-font-light);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
 }
 
 .form-container.closed {
   display: none;
+}
+
+.form-container > * {
+  width: 300px;
+}
+
+.form-cell {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-right: 36px;
+}
+
+input {
+  appearance: none;
+  -webkit-appearance: none;
+  box-shadow: none;
+  font: inherit;
+  border: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+.book-form input[type="text"],
+.book-form input[type="tel"] {
+  padding: 6px 12px;
+  border-radius: 18px;
+  height: 36px;
+}
+
+.book-form input[type="tel"] {
+  width: 150px;
+}
+
+.book-form button {
+  background: var(--yellow);
+  height: 36px;
+  border-radius: 18px;
+  border: 2px solid var(--light-yellow);
+}
+
+.book-form label {
+  padding-left: 6px;
+  letter-spacing: 1px;
+}
+
+.book-form input[type="checkbox"] {
+  width: 36px;
+  height: 36px;
+  border-radius: 18px;
+  background-color: #fff;
+}
+
+.book-form input[type="checkbox"]:checked::after {
+  content: "✔";
+  font-size: 2.2rem;
+  width: 28px;
+  height: 28px;
+  border-radius: 14px;
+  display: block;
+  color: var(--dark-blue);
+  position: relative;
+  top: -12px;
+  left: -1px;
+}
+
+.book-form input[type="checkbox"]:checked {
+  border: 3px solid var(--yellow);
+}
+
+.form-cell.checkbox {
+  padding: 0;
+  align-items: center;
 }
