@@ -40,6 +40,8 @@ function createBookCard(book) {
 }
 
 const cardContainer = document.querySelector(".card-container");
+const formContainer = document.querySelector(".form-container");
+const addBookBtn = document.querySelector("#call-book-form");
 
 function displayBooks() {
   myLibrary.forEach((book) => {
@@ -47,3 +49,9 @@ function displayBooks() {
     cardContainer.appendChild(bookCard);
   });
 }
+
+addBookBtn.addEventListener("click", () => {
+  formContainer.classList = formContainer.classList.contains("closed")
+    ? "form-container"
+    : "form-container closed";
+});

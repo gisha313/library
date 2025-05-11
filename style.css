@@ -118,3 +118,7 @@ button {
 
   color: var(--header-font-light);
 }
+
+.form-container.closed {
+  display: none;
+}
