@@ -43,9 +43,15 @@ const cardContainer = document.querySelector(".card-container");
 const formContainer = document.querySelector(".form-container");
 const callBookFormBtn = document.querySelector("#call-book-form");
 const addBookBtn = document.querySelector("#add-book");
-console.log(addBookBtn);
+
+const formBook = document.querySelector(".book-form > form");
+const formTitle = document.querySelector("#title");
+const formAuthor = document.querySelector("#author");
+const formPages = document.querySelector("#pages");
+const formRead = document.querySelector("#isRead");
 
 function displayBooks() {
+  cardContainer.innerHTML = "";
   myLibrary.forEach((book) => {
     const bookCard = createBookCard(book);
     cardContainer.appendChild(bookCard);
@@ -56,4 +62,19 @@ callBookFormBtn.addEventListener("click", () => {
   formContainer.classList = formContainer.classList.contains("closed")
     ? "form-container"
     : "form-container closed";
+});
+
+addBookBtn.addEventListener("click", (event) => {
+  addBookToLibrary(
+    formTitle.value,
+    formAuthor.value,
+    formPages.value,
+    formRead.checked
+  );
+
+  formBook.reset();
+  formContainer.classList = "form-container closed";
+  displayBooks();
+
+  event.preventDefault();
 });
