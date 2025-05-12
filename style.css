@@ -22,12 +22,25 @@ body {
   grid-template-rows: auto 1fr;
 
   line-height: 1.5;
+
+  font-family: "Merriweather", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
 }
 
 button {
   border: none;
   box-shadow: none;
   font: inherit;
+}
+
+.logo,
+.book-title {
+  font-family: "Limelight", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .header {
