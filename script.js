@@ -9,6 +9,7 @@ const cardContainer = document.querySelector(".card-container");
 const formContainer = document.querySelector(".form-container");
 const callBookFormBtn = document.querySelector("#call-book-form");
 const addBookBtn = document.querySelector("#add-book");
+const closeFormBtn = document.querySelector(".close-form");
 
 const formBook = document.querySelector(".book-form > form");
 const formTitle = document.querySelector("#title");
@@ -102,4 +103,8 @@ addBookBtn.addEventListener("click", (event) => {
   displayBooks();
 
   event.preventDefault();
+});
+
+closeFormBtn.addEventListener("click", () => {
+  formContainer.classList = "form-container closed";
 });
