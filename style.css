@@ -7,13 +7,13 @@
 :root {
   font-size: 18px;
 
-  --dark-blue: #172a3a;
-  --yellow: #f4d35e;
-  --light-yellow: #fbefc6;
-  --header-font-light: #ddd;
-  --bg-light-blue: #e2edf3;
-  --card-blue: #305c73;
-  --card-border-blue: #244556;
+  --dark-header: #082032;
+  --vibrant: #eca72c;
+  --vibrant-lighter: #ffcb70;
+  --font-light: #ddd;
+  --bg-dark: #3c5467;
+  --card-dark: #263140;
+  --card-border-dark: rgb(18, 38, 48);
 }
 
 body {
@@ -56,8 +56,8 @@ button {
 
   padding: 1rem;
 
-  background: var(--dark-blue);
-  color: var(--header-font-light);
+  background: var(--dark-header);
+  color: var(--font-light);
 
   height: 100px;
 }
@@ -71,11 +71,11 @@ button {
 }
 
 .add-book-section button {
-  background: var(--yellow);
+  background: var(--vibrant);
   width: 150px;
   height: 30px;
   border-radius: 15px;
-  border: 2px solid var(--light-yellow);
+  border: 2px solid var(--vibrant-lighter);
 }
 
 .logo {
@@ -87,13 +87,13 @@ button {
 .logo-svg {
   height: 50px;
   width: 50px;
-  fill: var(--header-font-light);
+  fill: var(--font-light);
   position: relative;
   top: -3px;
 }
 
 .content {
-  background: var(--bg-light-blue);
+  background: var(--bg-dark);
 }
 
 .card-container {
@@ -105,17 +105,17 @@ button {
 }
 
 .card {
-  background: var(--card-blue);
-  color: var(--header-font-light);
+  background: var(--card-dark);
+  color: var(--font-light);
 
   border-radius: 10px;
-  border: 1px solid var(--dark-blue);
+  border: 1px solid var(--dark-header);
 
   position: relative;
 }
 
 .book-title {
-  background: var(--yellow);
+  background: var(--vibrant);
   color: #111;
   border-radius: 9px 9px 0 0;
   padding-left: 8px;
@@ -127,11 +127,11 @@ button {
 }
 
 .form-container {
-  background: var(--card-border-blue);
+  background: var(--card-border-dark);
   width: clamp(350px, 40%, 400px);
   padding: 18px;
 
-  border: 4px solid var(--dark-blue);
+  border: 4px solid var(--dark-header);
   border-radius: 12px;
 
   position: fixed;
@@ -139,7 +139,7 @@ button {
   left: 50%;
   transform: translate(-50%, 0);
 
-  color: var(--header-font-light);
+  color: var(--font-light);
 
   display: flex;
   flex-direction: column;
@@ -191,10 +191,10 @@ input:focus {
 }
 
 .book-form button {
-  background: var(--yellow);
+  background: var(--vibrant);
   height: 36px;
   border-radius: 18px;
-  border: 2px solid var(--light-yellow);
+  border: 2px solid var(--vibrant-lighter);
 }
 
 .book-form label {
@@ -216,14 +216,14 @@ input:focus {
   height: 28px;
   border-radius: 14px;
   display: block;
-  color: var(--dark-blue);
+  color: var(--dark-header);
   position: relative;
   top: -12px;
   left: -1px;
 }
 
 .book-form input[type="checkbox"]:checked {
-  border: 3px solid var(--yellow);
+  border: 3px solid var(--vibrant);
 }
 
 .form-cell.checkbox {
@@ -232,7 +232,7 @@ input:focus {
 }
 
 .delete-book {
-  background: var(--yellow);
+  background: var(--vibrant);
   width: 24px;
   height: 24px;
 
