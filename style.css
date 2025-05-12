@@ -81,6 +81,7 @@ button {
 .logo {
   display: flex;
   gap: 18px;
+  letter-spacing: 1px;
 }
 
 .logo-svg {
@@ -88,7 +89,7 @@ button {
   width: 50px;
   fill: var(--header-font-light);
   position: relative;
-  top: -4px;
+  top: -3px;
 }
 
 .content {
