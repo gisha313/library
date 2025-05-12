@@ -135,11 +135,11 @@ button {
 }
 
 .form-container {
-  background: var(--card-border-dark);
+  background: var(--card-dark);
   width: clamp(350px, 40%, 400px);
-  padding: 18px;
+  padding: 36px 18px;
 
-  border: 4px solid var(--dark-header);
+  border: 4px solid var(--card-border-dark);
   border-radius: 12px;
 
   position: fixed;
@@ -198,7 +198,7 @@ input:focus {
   width: 150px;
 }
 
-.book-form button {
+#add-book {
   background: var(--vibrant);
   height: 36px;
   border-radius: 18px;
@@ -247,4 +247,15 @@ input:focus {
   position: absolute;
   top: 9px;
   right: 7px;
+}
+
+.close-form {
+  background: var(--card-dark);
+  fill: #fff;
+  width: 36px;
+  height: 36px;
+
+  position: absolute;
+  top: 9px;
+  right: 9px;
 }
