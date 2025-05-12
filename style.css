@@ -89,6 +89,8 @@ button {
 
   border-radius: 10px;
   border: 1px solid var(--dark-blue);
+
+  position: relative;
 }
 
 .book-title {
@@ -206,4 +208,14 @@ input:focus {
 .form-cell.checkbox {
   padding: 0;
   align-items: center;
+}
+
+.delete-book {
+  background: var(--yellow);
+  width: 24px;
+  height: 24px;
+
+  position: absolute;
+  top: 9px;
+  right: 7px;
 }
