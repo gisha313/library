@@ -33,6 +33,16 @@ function addBookToLibrary(title, author, pages, isRead) {
   myLibrary.push(newBook);
 }
 
+function removeBookFromLibrary() {
+  let bookID = this.parentElement.dataset.id;
+  myLibrary.splice(
+    myLibrary.findIndex((book) => book.id === bookID),
+    1
+  );
+  let bookCard = document.querySelector(`[data-id="${bookID}"]`);
+  bookCard.remove();
+}
+
 function createBookCard(book) {
   const card = document.createElement("div");
   card.classList.add("card");
@@ -45,6 +55,7 @@ function createBookCard(book) {
   const deleteBookBtn = document.createElement("button");
   deleteBookBtn.classList.add("delete-book");
   deleteBookBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>Delete Book</title><path d="M20 6.91L17.09 4L12 9.09L6.91 4L4 6.91L9.09 12L4 17.09L6.91 20L12 14.91L17.09 20L20 17.09L14.91 12L20 6.91Z" /></svg>`;
+  deleteBookBtn.addEventListener("click", removeBookFromLibrary);
   card.appendChild(deleteBookBtn);
 
   const author = document.createElement("p");
@@ -58,6 +69,8 @@ function createBookCard(book) {
   const isRead = document.createElement("p");
   isRead.textContent = book.isRead ? "Read" : "Not Read";
   card.appendChild(isRead);
+
+  card.dataset.id = book.id;
 
   return card;
 }
