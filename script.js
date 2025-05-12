@@ -10,6 +10,7 @@ const formContainer = document.querySelector(".form-container");
 const callBookFormBtn = document.querySelector("#call-book-form");
 const addBookBtn = document.querySelector("#add-book");
 const closeFormBtn = document.querySelector(".close-form");
+const overlay = document.querySelector(".overlay");
 
 const formBook = document.querySelector(".book-form > form");
 const formTitle = document.querySelector("#title");
@@ -84,10 +85,16 @@ function displayBooks() {
   });
 }
 
+function closeForm() {
+  formContainer.classList = "form-container closed";
+  overlay.style.display = "none";
+}
+
 callBookFormBtn.addEventListener("click", () => {
   formContainer.classList = formContainer.classList.contains("closed")
     ? "form-container"
     : "form-container closed";
+  overlay.style.display = "block";
 });
 
 addBookBtn.addEventListener("click", (event) => {
@@ -99,12 +106,11 @@ addBookBtn.addEventListener("click", (event) => {
   );
 
   formBook.reset();
-  formContainer.classList = "form-container closed";
+
+  closeForm();
   displayBooks();
 
   event.preventDefault();
 });
 
-closeFormBtn.addEventListener("click", () => {
-  formContainer.classList = "form-container closed";
-});
+closeFormBtn.addEventListener("click", closeForm);
