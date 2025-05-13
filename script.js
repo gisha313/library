@@ -61,7 +61,7 @@ function createBookCard(book) {
   card.appendChild(deleteBookBtn);
 
   const author = document.createElement("p");
-  author.textContent = "by " + book.author;
+  author.innerHTML = `by <em>${book.author}</em>`;
   card.appendChild(author);
 
   const pages = document.createElement("p");
