@@ -60,16 +60,29 @@ function createBookCard(book) {
   deleteBookBtn.addEventListener("click", removeBookFromLibrary);
   card.appendChild(deleteBookBtn);
 
-  const author = document.createElement("p");
+  //create div for author along with icon
+  const author = document.createElement("div");
   author.classList = "author";
-  author.innerHTML = `by <em>${book.author}</em>`;
+  author.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,6A2,2 0 0,0 10,8A2,2 0 0,0 12,10A2,2 0 0,0 14,8A2,2 0 0,0 12,6M12,13C14.67,13 20,14.33 20,17V20H4V17C4,14.33 9.33,13 12,13M12,14.9C9.03,14.9 5.9,16.36 5.9,17V18.1H18.1V17C18.1,16.36 14.97,14.9 12,14.9Z" /></svg>`;
+
+  const authorSpan = document.createElement("span");
+  authorSpan.innerHTML = `by <em>${book.author}</em>`;
+  author.appendChild(authorSpan);
+
   card.appendChild(author);
 
-  const pages = document.createElement("p");
+  //create div for pages display along with icon
+  const pages = document.createElement("div");
   pages.classList = "pages";
-  pages.textContent = book.pages + " pages";
+  pages.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14,10H19.5L14,4.5V10M5,3H15L21,9V19A2,2 0 0,1 19,21H5C3.89,21 3,20.1 3,19V5C3,3.89 3.89,3 5,3M5,5V19H19V12H12V5H5Z" /></svg>`;
+
+  const pagesSpan = document.createElement("span");
+  pagesSpan.textContent = book.pages + " pages";
+  pages.appendChild(pagesSpan);
+
   card.appendChild(pages);
 
+  //create div for display of reading status with checkbox
   const isRead = document.createElement("div");
   isRead.classList = "is-read-container";
   const isReadLabel = document.createElement("label");
