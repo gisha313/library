@@ -9,10 +9,12 @@
 
   --dark-header: #082032;
   --vibrant: #eca72c;
+  --vibrant-hover: #ecc22c;
   --vibrant-lighter: #ffcb70;
   --font-light: #ddd;
   --bg-dark: #3c5467;
   --card-dark: #263140;
+  --card-dark-hover: #334e71;
   --card-border-dark: #122630;
 }
 
@@ -292,7 +294,7 @@ input:focus {
 }
 
 .delete-book {
-  background: var(--vibrant);
+  background: none;
   width: 24px;
   height: 24px;
 
@@ -322,4 +324,17 @@ input:focus {
   z-index: 3;
 
   background: rgba(0, 0, 0, 0.65);
+}
+
+.card:hover {
+  background: var(--card-dark-hover);
+}
+
+.card:hover > .book-title {
+  background: var(--vibrant-hover);
+}
+
+#add-book:hover,
+#call-book-form:hover {
+  background: var(--vibrant-hover);
 }
