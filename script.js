@@ -12,6 +12,7 @@ const addBookBtn = document.querySelector("#add-book");
 const closeFormBtn = document.querySelector(".close-form");
 const overlay = document.querySelector(".overlay");
 
+const formAddBook = document.querySelector(".add-book-form");
 const formBook = document.querySelector(".book-form > form");
 const formTitle = document.querySelector("#title");
 const formAuthor = document.querySelector("#author");
@@ -132,7 +133,8 @@ callBookFormBtn.addEventListener("click", () => {
   overlay.style.display = "block";
 });
 
-addBookBtn.addEventListener("click", (event) => {
+formAddBook.addEventListener("submit", (event) => {
+  event.preventDefault();
   addBookToLibrary(
     formTitle.value,
     formAuthor.value,
@@ -144,8 +146,6 @@ addBookBtn.addEventListener("click", (event) => {
 
   closeForm();
   displayBooks();
-
-  event.preventDefault();
 });
 
 closeFormBtn.addEventListener("click", closeForm);
