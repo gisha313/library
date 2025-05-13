@@ -338,3 +338,11 @@ input:focus {
 #call-book-form:hover {
   background: var(--vibrant-hover);
 }
+
+.book-form input:user-invalid {
+  outline: 2px solid red;
+}
+
+.book-form input:focus {
+  outline: 2px solid var(--vibrant-lighter);
+}
