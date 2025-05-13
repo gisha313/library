@@ -136,10 +136,6 @@ button {
   margin: 2px 0 6px;
 }
 
-.card p {
-  padding-left: 16px;
-}
-
 .card label,
 .card div {
   padding-left: 8px;
@@ -163,6 +159,24 @@ button {
   position: relative;
   left: 3px;
   top: -2px;
+}
+
+.card svg {
+  width: 1.3em;
+  aspect-ratio: 1 / 1;
+  position: relative;
+  fill: var(--font-light);
+  top: -1px;
+  left: -4px;
+}
+
+.card div {
+  display: flex;
+  align-items: center;
+}
+
+.card span {
+  padding-left: 1px;
 }
 
 .form-container {
