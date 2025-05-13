@@ -39,6 +39,8 @@ button {
   border: none;
   box-shadow: none;
   font: inherit;
+
+  cursor: grab;
 }
 
 .logo,
