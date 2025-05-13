@@ -162,7 +162,7 @@ button {
 
   position: relative;
   left: 3px;
-  top: 2px;
+  top: -2px;
 }
 
 .form-container {
