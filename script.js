@@ -45,6 +45,12 @@ function removeBookFromLibrary() {
   bookCard.remove();
 }
 
+function changeBookReadStatus() {
+  let bookID = this.parentElement.parentElement.dataset.id;
+  let bookIndex = myLibrary.findIndex((book) => book.id === bookID);
+  myLibrary[bookIndex].isRead = !myLibrary[bookIndex].isRead;
+}
+
 function createBookCard(book) {
   const card = document.createElement("div");
   card.classList.add("card");
@@ -93,6 +99,9 @@ function createBookCard(book) {
   isReadCheckbox.setAttribute("type", "checkbox");
   isReadCheckbox.setAttribute("id", `read ${book.title}`);
   if (book.isRead) isReadCheckbox.setAttribute("checked", "checked");
+
+  //change status of book in 'database'
+  isReadCheckbox.addEventListener("click", changeBookReadStatus);
 
   isRead.appendChild(isReadCheckbox);
   isRead.appendChild(isReadLabel);
