@@ -61,15 +61,28 @@ function createBookCard(book) {
   card.appendChild(deleteBookBtn);
 
   const author = document.createElement("p");
+  author.classList = "author";
   author.innerHTML = `by <em>${book.author}</em>`;
   card.appendChild(author);
 
   const pages = document.createElement("p");
+  pages.classList = "pages";
   pages.textContent = book.pages + " pages";
   card.appendChild(pages);
 
-  const isRead = document.createElement("p");
-  isRead.textContent = book.isRead ? "Read" : "Not Read";
+  const isRead = document.createElement("div");
+  isRead.classList = "is-read-container";
+  const isReadLabel = document.createElement("label");
+  isReadLabel.setAttribute("for", `read ${book.title}`);
+  isReadLabel.textContent = "Read";
+
+  const isReadCheckbox = document.createElement("input");
+  isReadCheckbox.setAttribute("type", "checkbox");
+  isReadCheckbox.setAttribute("id", `read ${book.title}`);
+  if (book.isRead) isReadCheckbox.setAttribute("checked", "checked");
+
+  isRead.appendChild(isReadCheckbox);
+  isRead.appendChild(isReadLabel);
   card.appendChild(isRead);
 
   card.dataset.id = book.id;

@@ -131,9 +131,38 @@ button {
   font-size: 1.3rem;
 }
 
-.card p {
-  padding-left: 8px;
+.card p,
+.card div {
   margin: 2px 0 6px;
+}
+
+.card p {
+  padding-left: 16px;
+}
+
+.card label,
+.card div {
+  padding-left: 8px;
+}
+
+.card input[type="checkbox"] {
+  width: 0.9em;
+  height: 0.9em;
+  border: 1px solid var(--font-light);
+}
+
+.card input[type="checkbox"]:checked::after {
+  content: "";
+  width: 5px;
+  height: 12px;
+  border-right: 3px solid var(--font-light);
+  border-bottom: 3px solid var(--font-light);
+  transform: rotate(45deg);
+  display: block;
+
+  position: relative;
+  left: 3px;
+  top: 2px;
 }
 
 .form-container {
